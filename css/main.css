@@ -125,6 +125,13 @@ header {
 
 .hero-panel-header {
   display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-panel-content {
+  display: grid;
   gap: 1.5rem;
 }
 
@@ -154,6 +161,56 @@ header {
   border-radius: 50%;
   border: 2px solid rgba(142, 123, 255, 0.6);
   box-shadow: inset 0 0 10px rgba(142, 123, 255, 0.5);
+}
+
+.team-animation {
+  position: relative;
+  width: min(220px, 100%);
+  aspect-ratio: 1;
+  margin-left: auto;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(104, 243, 255, 0.08), transparent 65%);
+}
+
+.team-core {
+  position: absolute;
+  inset: 40%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(142, 123, 255, 0.9), rgba(104, 243, 255, 0.2));
+  box-shadow: 0 0 18px rgba(142, 123, 255, 0.6);
+}
+
+.team-node {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(104, 243, 255, 0.8);
+  box-shadow: 0 0 10px rgba(104, 243, 255, 0.6);
+  animation: pulse-node 2.4s ease-in-out infinite;
+}
+
+.team-node:nth-of-type(2) { top: 6%; left: 45%; animation-delay: 0s; }
+.team-node:nth-of-type(3) { top: 18%; left: 70%; animation-delay: 0.2s; }
+.team-node:nth-of-type(4) { top: 45%; left: 84%; animation-delay: 0.4s; }
+.team-node:nth-of-type(5) { top: 70%; left: 72%; animation-delay: 0.6s; }
+.team-node:nth-of-type(6) { top: 82%; left: 48%; animation-delay: 0.8s; }
+.team-node:nth-of-type(7) { top: 70%; left: 20%; animation-delay: 1s; }
+.team-node:nth-of-type(8) { top: 45%; left: 8%; animation-delay: 1.2s; }
+.team-node:nth-of-type(9) { top: 18%; left: 20%; animation-delay: 1.4s; }
+.team-node:nth-of-type(10) { top: 30%; left: 45%; animation-delay: 1.6s; }
+.team-node:nth-of-type(11) { top: 58%; left: 56%; animation-delay: 1.8s; }
+
+@keyframes pulse-node {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
 }
 
 .hero-list {
@@ -314,6 +371,14 @@ footer {
 @media (max-width: 720px) {
   .nav-links {
     display: none;
+  }
+
+  .hero-panel-header {
+    grid-template-columns: 1fr;
+  }
+
+  .team-animation {
+    margin: 0 auto;
   }
 
   .hero {
