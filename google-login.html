@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Racana Google Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html">RACANA</a>
+      <nav class="nav-links">
+        <a href="index.html#platform">Platform</a>
+        <a href="index.html#solutions">Solutions</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#insights">Insights</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn" href="index.html#contact">Talk to sales</a>
+        <a class="btn btn-primary" href="index.html">Back to home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="login-page">
+    <section class="login-card">
+      <div>
+        <span class="badge">Secure access</span>
+        <h1>Sign in with Google</h1>
+        <p>Verify your Google account to access your Racana automation workspace.</p>
+      </div>
+
+      <div class="login-actions">
+        <button class="btn google-btn" type="button" data-google-login>
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+          Continue with Google
+        </button>
+      </div>
+
+      <form class="login-form" data-login-form>
+        <div>
+          <label for="email">Google email</label>
+          <input id="email" name="email" type="email" placeholder="you@gmail.com" required />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" required />
+        </div>
+        <button class="btn btn-primary" type="submit">Verify login</button>
+      </form>
+
+      <div class="login-status" data-login-status></div>
+
+      <div class="login-footer">
+        <span>Need help? <a href="mailto:hello@racana.ai">Contact support</a></span>
+        <a href="index.html">Return to Racana</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
